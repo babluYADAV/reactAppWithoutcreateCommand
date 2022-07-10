@@ -1,0 +1,60 @@
+npm init --y
+
+npm i react react-dom
+
+development dependency
+
+npm i -D @babel/core @babel/preset-env @babel/preset-react babel-loader file-loader css-loader css-loader sass-loader sass webpack webpack-cli style-loader webpack-dev-server html-webpack-plugin
+
+separate css file
+
+npm i -D mini-css-extract-plugin
+
+for typescript project setup
+npm init --y
+npm i react react-dom
+npm i -D typescript @types/react @types/react-dom
+npm i -D @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript
+npm i -D webpack webpack-cli webpack-dev-server html-webpack-plugin
+npm i-D babel-loader
+npm i -D style-loader css-loader
+
+tsConfig
+
+{
+"compilerOptions": {
+"module": "ESNext",
+"target": "ES5",
+"moduleResolution": "node",
+"lib":[
+"DOM",
+"ESNext"
+],
+"allowJs": true,
+"checkJs": false,
+"jsx": "react-jsx",
+"esModuleInterop": true,
+"skipLibCheck": true,
+"forceConsistentCasingInFileNames":true,
+"noEmit": true,
+"resolveJsonModule":true,
+
+    },
+    "include": [ "./src/**/*"],
+
+}
+
+.babelrc
+
+{
+"presets":[
+"@babel/preset-env",
+[
+"@babel/preset-react",
+{
+"runtime": "automatic"
+}
+],
+"@babel/preset-typescript"
+]
+}

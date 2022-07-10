@@ -30,13 +30,13 @@ module.exports = {
     ],
   },
   output: {
-    path: path.resolve(__dirname, "..", "./build"),
+    path: path.resolve(__dirname, "..", "./public/build"),
     filename: "bundle.js",
   },
   mode: process.env.NODE_ENV,
   plugins: [
     new HtmlWepackPlugin({
-      template: path.resolve(__dirname, "..", "src/index.html"),
+      template: path.resolve(__dirname, "..", "./public/index.html"),
     }),
     new MiniCssExtractPlugin(),
   ],

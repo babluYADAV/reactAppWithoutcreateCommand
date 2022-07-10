@@ -1,7 +1,7 @@
 import React from "react";
 
 const App = () => {
-  return <div>welcome with rect configuration app</div>;
+  return <h1>welcome with rect configuration app</h1>;
 };
 
 export default App;
